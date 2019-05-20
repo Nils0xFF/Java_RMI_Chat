@@ -6,16 +6,9 @@
 package Client;
 
 import Interfaces.ClientProxy;
-import Interfaces.ChatProxy;
 import Interfaces.ChatServer;
-import Server.ChatServerImpl;
-import java.net.MalformedURLException;
 import java.rmi.Naming;
-import java.rmi.NotBoundException;
-import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
