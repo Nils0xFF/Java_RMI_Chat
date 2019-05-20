@@ -20,8 +20,10 @@ public class Client {
     public static void main(String args[]) {
         ChatServer cs = null;
         try {
+            System.out.print("Server Adress: ");
+            String serverAdr = Eingabe.leseString();
             // Registry registry = LocateRegistry.getRegistry("137.173.110.8", Registry.REGISTRY_PORT);
-            cs = (ChatServer) Naming.lookup("rmi://127.0.0.1:1099/ChatServer");
+            cs = (ChatServer) Naming.lookup("rmi://" + serverAdr + "/ChatServer");
         } catch (Exception ex) {
             System.out.println(ex);
             System.exit(0);
