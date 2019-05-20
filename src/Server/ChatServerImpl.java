@@ -8,21 +8,15 @@ package Server;
 import Interfaces.ChatServer;
 import Interfaces.ChatProxy;
 import Interfaces.ClientProxy;
-import java.net.MalformedURLException;
-import java.rmi.Naming;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Collection;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *

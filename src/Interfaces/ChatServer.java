@@ -5,8 +5,6 @@
  */
 package Interfaces;
 
-import Interfaces.ChatProxy;
-import Interfaces.ClientProxy;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
