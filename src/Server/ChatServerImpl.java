@@ -44,6 +44,7 @@ public class ChatServerImpl extends UnicastRemoteObject implements ChatServer {
     @Override
     public ChatProxy subscribeUser(String username, ClientProxy handle) throws RemoteException {
         if(this.chatProxies.containsKey(username)) return null;
+        System.out.println(username + " has just subscribed!");
         ChatProxyImpl cp = new ChatProxyImpl(username, handle, this);
         this.chatProxies.put(username, cp);
         return cp;
@@ -51,6 +52,7 @@ public class ChatServerImpl extends UnicastRemoteObject implements ChatServer {
 
     @Override
     public boolean unsubscribeUser(String username) throws RemoteException {
+        System.out.println(username + " has unsubscribed!");
         return this.chatProxies.remove(username) != null;
     }
     
